@@ -1,0 +1,94 @@
+/* General Styles */
+body {
+  font-family: 'Courier New', monospace;
+  background-color: #0f0f0f;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  padding: 80px 20px;
+}
+
+.neon-bg {
+  background: linear-gradient(135deg, #1a1a1a, #282828);
+  border: 2px solid #00ffcc;
+  box-shadow: 0 0 20px #00ffcc;
+}
+
+.neon-text {
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+.neon-link:hover {
+  color: #ff00ff !important;
+}
+
+/* Loader */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0f0f0f;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: 5px solid #00ffcc;
+  border-top: 5px solid #ff00ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Social Icons */
+.social-icons a {
+  color: #00ffcc;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff00ff;
+  transform: scale(1.2);
+}
+
+/* Dark/Light Mode */
+body.light-mode {
+  background-color: #f0f0f0;
+  color: #0f0f0f;
+}
+
+body.light-mode .neon-text {
+  color: #0f0f0f;
+  text-shadow: none;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #00ffcc;
+  border: none;
+  color: #0f0f0f;
+  cursor: pointer;
+  border-radius: 5px;
+}
